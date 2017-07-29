@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="intro">Score Keeper ia an Application to traking game score for two Team in 4 Rounds </string>
+    <string name="TeamA">Team A Score</string>
+    <string name="TeamB">Team B Score</string>
+    <string name="ButtonAdd"> Add Score</string>
+    <string name="TrackScoreTeamA">Track Team A</string>
+    <string name="TrackScoreTeamB">Track Team B</string>
+    <string name="GameRound1">Round 1</string>
+    <string name="GameRound2">Round 2</string>
+    <string name="GameRound3">Round 3</string>
+    <string name="GameRound4">Round 4</string>
+    <string name="TotalAllScore">Total Scores</string>
+    <string name="ButtonReset">RESET</string>
+    <string name="ButtonPercent">PERCENTAGE</string>
+    <string name="ButtonDiff">DEFFRENCE</string>
+    <string name="appinfo">This application designed for ABND by Misk Udacity program any more info contact to tagreed.mk@gmail.com</string>
+
+</resources>

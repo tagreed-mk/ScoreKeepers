@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/App_Parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.tagreed.abnd.scorekeeper.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+    android:id="@+id/Teams_Enter_Score_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/General_PPading_Size"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/General_PPading_Size"
+            android:layout_marginTop="@dimen/Margin_Top_Size"
+            android:text="@string/TeamA"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+        <EditText
+            android:id="@+id/Team_A_Score_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+<LinearLayout
+
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/General_PPading_Size"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/General_PPading_Size"
+        android:layout_marginTop="@dimen/Margin_Top_Size"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:text="@string/TeamB"/>
+    <EditText
+        android:id="@+id/Team_B_Score_Input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        />
+
+</LinearLayout>
+
+ </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Button_Add_Score_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:onClick="Adding_Score"
+            android:text="@string/ButtonAdd"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Track_Teams_Header_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/General_PPading_Size"
+            android:layout_marginLeft="@dimen/Margin_Left_Size"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorTrack"
+            android:text="@string/TrackScoreTeamA"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/General_PPading_Size"
+                android:layout_marginRight="@dimen/Margin_Right_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                android:text="@string/TrackScoreTeamB"/>
+        </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Roud1_Track_Score_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/Reound1_Label_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Round1_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:text="@string/GameRound1"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Round1_TeamA_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round1_TeamA_Score_Dispaly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Round1_TeamB_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Round1_TeamB_Score_Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                />
+        </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Round2_Track_Score_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/Round2_Label_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Round2_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic"
+                android:textColor="@color/colorTrack"
+                android:text="@string/GameRound2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Round2_TeamA_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round2_TeamA_Score_Dispaly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Round2_TeamB_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round2_TeamB_Score_Dispaly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Round3_Track_Score_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/Round3_Label_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Round3_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic"
+                android:textColor="@color/colorTrack"
+                android:text="@string/GameRound3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Round3_TeamA_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round3_TeamA_Score_Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Roun3_TeamB_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round3_TeamB_Score_Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Roun4_Track_Score_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/Round4_Label_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round4_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic"
+                android:textColor="@color/colorTrack"
+                android:text="@string/GameRound4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Round4_TeamA_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round4_TeamA_Score_Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Round4_TeamB_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Round4_TeamB_Score_Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTrack"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Total_Scors_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/Total_TeabAScore_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Total_Scors_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic|bold"
+                android:textColor="@color/colorTotal"
+                android:text="@string/TotalAllScore"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/TeamA_Total_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/TeamA_Total_Dispaly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTotal"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/TeamB_Total_Score_Layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/TeamB_Total_Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorTotal"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/Teams_Percentage_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Teams_Percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTotal"
+            android:textStyle="bold|italic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/TeamA_Percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTotal"
+            android:textStyle="bold|italic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/TeamB_Percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTotal"
+            android:textStyle="bold|italic"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Teams_Difference_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Teams_Difference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTotal"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Winner_Label_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/Winner_Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Marigin_Top_Special_Size"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorWinner"
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/App_Buttons_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Reset_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/Margin_Top_Size"
+            android:gravity="center"
+            android:onClick="Reset_Score"
+            android:text="@string/ButtonReset"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ButtonPercent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/Margin_Top_Size"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:onClick="Calculate_Winner_Percentage"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/Margin_Top_Size"
+            android:text="@string/ButtonDiff"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:onClick="Calculate_Diffrence"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

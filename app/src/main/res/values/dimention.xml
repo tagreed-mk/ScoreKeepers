@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="General_PPading_Size">4dp</dimen>
+    <dimen name="Margin_Top_Size">15dp</dimen>
+    <dimen name="Margin_Left_Size">90dp</dimen>
+    <dimen name="Margin_Right_Size">40dp</dimen>
+    <dimen name="Marigin_Top_Special_Size">20dp</dimen>
+
+</resources>
